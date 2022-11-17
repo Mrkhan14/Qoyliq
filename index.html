@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Qo'yliq bozori</title>
+</head>
+<body>
+    <header class="header-my">
+        <div class="container">
+            <div class="h-top">
+                <div class="languages w-300">
+                    <div class="left-bar-menu">
+                        <span><i class="fa-solid fa-bars"></i> Меню </span> 
+                        <nav id="left-bar" class="left-bar">
+                            <div class="b-top">
+                                <div class="menu-site">
+                                    <a href="index.html">
+                                        <span>Главная</span>
+                                    </a>
+                                    <a href="#">
+                                        <span>Qo'yliq</span>
+                                    </a>
+                                    <a href="comfortable.html">
+                                        <span>Комфортный</span>
+                                    </a>
+                                    <a href="abote.html">
+                                        <span>О компании</span>
+                                    </a>
+                                    <a href="contact.html">
+                                        <span>Контакты</span>
+                                    </a>
+                                </div>
+                                <div class="tel">
+                                    <a href="#">+99890 000 00 00</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="social-networks  w-300">
+                    <a href="#"><i class="fa-solid fa-map-location-dot"></i> <span>Карта проекта </span> </a> 
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a> 
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a> 
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="center-h-full">
+            <div class="page-hero">
+                <div class="slider_main_block" 
+                    style="background-size:cover;background-position:bottom center;" 
+                    data-tablet="./img/slider/a0.jpg" 
+                    data-desktop="./img/slider/a0.jpg"
+                    data-mobile="./img/slider/a0.jpg">
+            
+                    <!-- Slider 1-->
+                    <div>
+                        <div class="site-slider__content app_slide">
+                            <div class="container">
+                                <div class="site-slider__title">OUR BUILDING OVERVIEW</div>
+                                <div class="site-slider__description">
+                                    Interior of volumes, space, air, proportion, with certain light and mood. <br>
+                                    These interiors are meant to last forever. You need to be sure there <br>
+                                    isn't anything embarrassing hidden in the middle of text.
+                                </div>
+                                <div class="app_links d-flex flex-wrap pt-3">
+                                    <a href="/app/" class="button-main-slider ing_prt8" tabindex="0">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bgslider" 
+                        data-tablet="./img/slider/a0.jpg" 
+                        data-desctop="./img/slider/a0.jpg"
+                        data-mobile="./img/slider/a0.jpg">
+                        </div>
+                    </div>
+                
+                    <!--Slider 2-->
+                    <div>
+                        <div class="site-slider__content app_slide">
+                            <div class="container">
+                                <div class="site-slider__title">CHOOSE YOUR APARTMENT</div>
+                                <div class="site-slider__description">
+                                    Interior of volumes, space, air, proportion, with certain light and mood. <br>
+                                    These interiors are meant to last forever. You need to be sure there <br>
+                                    isn't anything embarrassing hidden in the middle of text.
+                                </div>
+                                <div class="app_links d-flex flex-wrap pt-3">
+                                    <a href="/app/" class="button-main-slider ing_prt8" tabindex="0">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bgslider" 
+                        data-tablet="./img/slider/a1.jpg" 
+                        data-desctop="./img/slider/a1.jpg"
+                        data-mobile="./img/slider/a1.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-video-container p-absolute">
+                <img src="img/slider/a0.jpg" alt="video-image" class="d-block img-cover">
+                <div class="image-layer p-absolute w-100 h-100 child-center pointer">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+        </section>
+        <!-- end Section Slider -->
+    </main>
+    <footer></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/slider.js"></script>
+    <script type="text/javascript">
+        if (document.querySelector('.slider_main_block') != null) {
+  
+          if (window.innerWidth < 750) {
+            document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-mobile') + '); background-size:cover;background-position:bottom center;')
+          }
+          if (window.innerWidth > 749 && window.innerWidth < 1185) {
+            document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-tablet') + '); background-size:cover;background-position:bottom center;')
+          }
+          if (window.innerWidth > 1184) {
+            document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-desktop') + ');background-size:cover;background-position:bottom center;')
+          }
+        }
+      </script>
+      <!-- Area End [SliderMain] -->
+</body>
+</html>
