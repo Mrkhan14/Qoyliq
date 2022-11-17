@@ -257,7 +257,7 @@ p{
     position: relative;
 }
 .about-img{
-    width: clamp(200px, 100%, 450px);
+    width: clamp(200px, 100%, 350px);
 }
 .ab-left:before {
     content: "";
@@ -276,12 +276,12 @@ p{
     width: 50%;
 }
 .ab-right h3{
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     padding: 0px;
     margin: 0px;
 }
 .ab-right p{
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 2vw, 1.7rem);
 }
 .nobefor::before{
     content: "";
@@ -369,4 +369,57 @@ p{
 .text-info-comfortable{
     font-size: 1.2rem;
     flex: 1;
+}
+.blocks-title{
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+.f-about{
+    margin-top: 140px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.itme-f-about{
+    width: clamp(200px, 25%, 100%);
+    margin: auto;
+    text-align: center;
+}
+.itme-f-about i{
+    font-size: clamp(2.5rem, 4vw, 6rem);
+    margin-bottom: 20px;
+}
+.animate__animated.animate__delay-04s {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    animation-duration: 1s;
+}
+.animate__animated.animate__delay-08s {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    animation-duration: 1s;
+}
+.animate__animated.animate__delay-1-2s {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+    animation-duration: 1.2s;
+}
+.animate__animated.animate__delay-1-6s {
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+    -webkit-animation-delay: 1.6s;
+    animation-duration: 1.6s;
+}
+.animate__animated.animate__delay-2s {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-duration: 2s;
 }
