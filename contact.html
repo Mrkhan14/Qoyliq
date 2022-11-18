@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>Qo'yliq bozori</title>
@@ -25,11 +27,17 @@
                                     <a href="#">
                                         <span>Qo'yliq</span>
                                     </a>
+                                    <a href="blocks.html">
+                                        <span>Блоки</span>
+                                    </a>
                                     <a href="comfortable.html">
                                         <span>Комфортный</span>
                                     </a>
                                     <a href="abote.html">
                                         <span>О компании</span>
+                                    </a>
+                                    <a href="oproekt.html">
+                                        <span>О проекте</span>
                                     </a>
                                     <a href="contact.html">
                                         <span>Контакты</span>
@@ -67,13 +75,13 @@
                         </iframe>
                     </div>
                     <div class="my-col-2 contact-right ">
-                        <h3>Хотите узнать больше?</h3>
-                        <p class="pt-1r">Приглашаем Вас посетить офис продаж.</p>
-                        <h3 class="pt-1r" >+998 93 730 55 55</h3>
-                        <h3 class="" >+998 93 730 55 55</h3>
-                        <p class="work">Пн-Пт: 09:00-21:00 / Сб-Вс: 09:30-20:00</p>
-                        <p class="worke-info">или оставьте Ваши контактные данные и Ваш <br> персональный менеджер предоставит <br> более подробную информацию</p>
-                        <form action="" class="center-form">
+                        <h3 class="animate__animated animate__fadeInUp animate__delay-04s">Хотите узнать больше?</h3>
+                        <p class="pt-1r animate__animated animate__fadeInUp animate__delay-04s">Приглашаем Вас посетить офис продаж.</p>
+                        <h3 class="pt-1r animate__animated animate__fadeInUp animate__delay-08s" >+998 93 730 55 55</h3>
+                        <h3 class="animate__animated animate__fadeInUp animate__delay-08s" >+998 93 730 55 55</h3>
+                        <p class="work animate__animated animate__fadeInUp animate__delay-1-2s">Пн-Пт: 09:00-21:00 / Сб-Вс: 09:30-20:00</p>
+                        <p class="worke-info animate__animated animate__fadeInUp animate__delay-1-2s">или оставьте Ваши контактные данные и Ваш <br> персональный менеджер предоставит <br> более подробную информацию</p>
+                        <form action="" class="center-form animate__animated animate__fadeInUp animate__delay-1-2s">
                             <input type="text" class="form-input" placeholder="Ваше имя">
                             <input type="text" class="form-input" placeholder="Ваш телефон">
                             <button>Отправить</button>
@@ -89,5 +97,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/slider.js"></script>
+    <script>
+        $(document).ready(function() {
+            //   Users can skip the loading process if they want.
+            $('.skip').click(function() {
+                $('.overlay, body').addClass('loaded');
+            })
+
+            //   Will wait for everything on the page to load.
+            $(window).bind('load', function() {
+                $('.overlay, body').addClass('loaded');
+                setTimeout(function() {
+                    $('.overlay').css({'display':'none'})
+                }, 2000)
+            });
+
+            // Will remove overlay after 1min for users cannnot load properly.
+            setTimeout(function() {
+                $('.overlay, body').addClass('loaded');
+            }, 10000);
+        })
+    </script>
 </body>
 </html>

@@ -11,6 +11,21 @@
     <title>Qo'yliq bozori</title>
 </head>
 <body>
+    <div id="loader">
+        <div class="overlay">
+            <div class="overlayDoor"></div>
+            <div class="overlayContent">
+                <div class="loader">
+                    <span>
+                        <img src="./img/logo.png" alt="">
+                    </span>
+                    <!-- <span></span>
+                    <span></span> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="header-my">
         <div class="container">
             <div class="h-top">
@@ -26,11 +41,17 @@
                                     <a href="#">
                                         <span>Qo'yliq</span>
                                     </a>
+                                    <a href="blocks.html">
+                                        <span>Блоки</span>
+                                    </a>
                                     <a href="comfortable.html">
                                         <span>Комфортный</span>
                                     </a>
                                     <a href="abote.html">
                                         <span>О компании</span>
+                                    </a>
+                                    <a href="oproekt.html">
+                                        <span>О проекте</span>
                                     </a>
                                     <a href="contact.html">
                                         <span>Контакты</span>
@@ -125,20 +146,41 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/slider.js"></script>
-    <script type="text/javascript">
+        <script type="text/javascript">
         if (document.querySelector('.slider_main_block') != null) {
-  
-          if (window.innerWidth < 750) {
-            document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-mobile') + '); background-size:cover;background-position:bottom center;')
-          }
-          if (window.innerWidth > 749 && window.innerWidth < 1185) {
-            document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-tablet') + '); background-size:cover;background-position:bottom center;')
-          }
-          if (window.innerWidth > 1184) {
-            document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-desktop') + ');background-size:cover;background-position:bottom center;')
-          }
+    
+            if (window.innerWidth < 750) {
+                document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-mobile') + '); background-size:cover;background-position:bottom center;')
+            }
+            if (window.innerWidth > 749 && window.innerWidth < 1185) {
+                document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-tablet') + '); background-size:cover;background-position:bottom center;')
+            }
+            if (window.innerWidth > 1184) {
+                document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-desktop') + ');background-size:cover;background-position:bottom center;')
+            }
         }
-      </script>
+        </script>
+        <script>
+            $(document).ready(function() {
+                //   Users can skip the loading process if they want.
+                $('.skip').click(function() {
+                    $('.overlay, body').addClass('loaded');
+                })
+    
+                //   Will wait for everything on the page to load.
+                $(window).bind('load', function() {
+                    $('.overlay, body').addClass('loaded');
+                    setTimeout(function() {
+                        $('.overlay').css({'display':'none'})
+                    }, 2000)
+                });
+    
+                // Will remove overlay after 1min for users cannnot load properly.
+                setTimeout(function() {
+                    $('.overlay, body').addClass('loaded');
+                }, 60000);
+            })
+        </script>
       <!-- Area End [SliderMain] -->
 </body>
 </html>

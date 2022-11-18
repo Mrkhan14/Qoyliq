@@ -10,6 +10,11 @@ body{
     background-color: #f2f4f7;
     background-color: #f2f2f2;
 }
+.main-bg{
+   background-color: #004460; 
+   background-color: #2f475e;
+   
+}
 a{
     text-decoration: none;
 }
@@ -380,15 +385,21 @@ p{
     margin-top: 140px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .itme-f-about{
-    width: clamp(200px, 25%, 100%);
+    width: clamp(300px, 33.3%, 100%);
     margin: auto;
     text-align: center;
+    margin-bottom: 3rem;
 }
 .itme-f-about i{
     font-size: clamp(2.5rem, 4vw, 6rem);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+.itme-f-about h3{
+    padding: 0px;
+    margin: 0.5rem 0;
 }
 .animate__animated.animate__delay-04s {
     -webkit-animation-delay: 0.4s;
@@ -422,4 +433,190 @@ p{
     animation-delay: 2s;
     -webkit-animation-delay: 2s;
     animation-duration: 2s;
+}
+
+#loader    .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000000;
+}
+
+#loader .overlay .overlayDoor:before,
+#loader .overlay .overlayDoor:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #f2f4f7;
+    background: #004460;
+    transition: 1s cubic-bezier(0.77, 0, 0.18, 1);
+    transition-delay: 0.8s;
+}
+
+#loader .overlay .overlayDoor:before {
+    left: 0;
+}
+
+#loader .overlay .overlayDoor:after {
+    right: 0;
+}
+
+#loader .overlay.loaded .overlayDoor:before {
+    left: -50%;
+}
+
+#loader .overlay.loaded .overlayDoor:after {
+    right: -50%;
+}
+
+#loader .overlay.loaded .overlayContent {
+    opacity: 0;
+    margin-top: -15px;
+}
+
+#loader  .overlay .overlayContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+#loader .overlay .overlayContent .skip {
+    display: block;
+    width: 130px;
+    text-align: center;
+    margin: 50px auto 0;
+    cursor: pointer;
+    color: #fff;
+    font-family: "Nunito";
+    font-weight: 700;
+    padding: 12px 0;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    transition: 0.2s ease;
+}
+
+#loader .overlay .overlayContent .skip:hover {
+    background: #ddd;
+    color: #444;
+    border-color: #ddd;
+}
+
+#loader .loader>span {
+    display: inline-block;
+    /* background-color: #ff9000; */
+    width: 50px;
+    height: 0px;
+    border-radius: 50%;
+    margin: 0 8px;
+    transform: translate3d(0);
+    /* animation: bounce 5s infinite alternate; */
+}
+#loader .loader>span img{
+    width: 100px;
+}
+/* #loader .loader>span:nth-child(2) {
+    background-color: #5a0093;
+    animation-delay: 0.2s;
+} */
+
+#loader .loader>span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    to {
+        width: 16px;
+        height: 16px;
+        transform: translate3d(0, -16px, 0);
+    }
+}
+
+.blocks-main{
+    display: flex;
+}
+.blocks-main-left,
+.blocks-main-right{
+    width: 50%;
+    position: relative;
+}
+.blocks-main-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.blocks-main-left-top{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.blocks-main-left-top img{
+    width: 40%;
+}
+
+.blocks-main-left-bottom{
+    margin: auto;
+    text-align: center;
+}
+.blocks-main-left-bottom img{
+    width: 70%;
+}
+
+.blocks-main-right img{
+    width: 100%;
+    padding-top: 4rem;
+}
+.height-t-105{
+    height: calc(100vh - 105px);
+}
+.blocks-main-right-info {
+    position: absolute;
+    top: 0.6rem;
+    right: 5%;
+}
+.blocks-main-right-info h2 {
+    margin: 0;
+    padding: 0px;
+    font-size: 4rem;
+    color: #fff;
+    line-height: 4rem;
+}
+.blocks-main-right-info p{
+    color: #fff;
+    padding: 0px;
+    margin: 0;
+    font-size: 1.5rem;
+}
+.table-my{
+    margin-top: 4rem;
+}
+.table-my>div{
+    display: flex;
+    
+}
+.table-my>div span{
+    width: 120px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    border-top: 1px solid #fff;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.table-my>.table-my-title span{
+    border-top: 1px solid #2f475e;
+}
+.table-my>div span:nth-child(2n) {
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
 }
