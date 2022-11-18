@@ -217,7 +217,7 @@ p{
     transition: 0s;
   }
 .left-bar{
-    background:#212121fa;
+    background:#004460de;
     border-right:1px solid #e5e5e5;
     position:absolute;
     top:0;
@@ -237,7 +237,7 @@ p{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    margin-top: 5rem;
 }
 .left-bar-menu .menu-site{
     display: flex;
@@ -561,7 +561,10 @@ p{
 .blocks-main-left-top img{
     width: 40%;
 }
-
+.blocks-main-left-top .width230{
+    width: 230px;
+    margin-right: 40px;
+}
 .blocks-main-left-bottom{
     margin: auto;
     text-align: center;
@@ -642,4 +645,22 @@ p{
 }
 .social-networks a:hover{
     color: #d0a361;
+}
+.len{
+    justify-content: center;
+}
+.len a{
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+    margin: 0.5rem;
+}
+.left-login{
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+.left-login img{
+    width: 80px;
 }
