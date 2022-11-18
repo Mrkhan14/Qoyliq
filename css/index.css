@@ -12,7 +12,7 @@ body{
 }
 .main-bg{
    background-color: #004460; 
-   background-color: #2f475e;
+   background-color: #284459;
    
 }
 a{
@@ -619,4 +619,27 @@ p{
 .table-my>div span:nth-child(2n) {
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
+}
+.links-blocks{
+    width: 100%;
+    display: flex;
+}
+.links-blocks a {
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    margin: 1rem 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links-blocks a:hover,
+.links-blocks .actione{
+    color: #d0a361;
+    border-color: #d0a361;
+}
+.social-networks a:hover{
+    color: #d0a361;
 }

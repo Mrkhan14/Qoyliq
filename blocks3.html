@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>Qo'yliq bozori</title>
 </head>
-<body class="color-black">
+<body class="main-bg">
     <header class="header-my">
         <div class="container">
             <div class="h-top">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="logo">
                     <a href="index.html">
-                        <img src="./img/logo-d.png" alt="">
+                        <img src="./img/logo.png" alt="">
                     </a>
                 </div>
                 <div class="social-networks  w-300">
@@ -63,26 +63,49 @@
     </header>
     <main>
         <section id="center-h-full">
-            <div class="container">
-                <div class="my-row about pt-105">
-                    <div class="my-col-2 contact-left ab-left nobefor ">
-                        <iframe
-                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A69ea262ef12e362b24d81c13b8b7b141d028a2140b01c763f9ffb1594f94692f&amp;source=constructor"
-                            width="98%" height="400" frameborder="0">
-                        </iframe>
+            <div class="container pt-105">
+                <div class="blocks-main height-t-105">
+                    <div class="blocks-main-left">
+                        <div class="links-blocks animate__animated animate__fadeInDown animate__delay-08s">
+                            <a href="blocks.html">1</a>
+                            <a href="blocks2.html">2</a>
+                            <a href="blocks3.html"  class="actione">3</a>
+                        </div>
+                        <div class="blocks-main-left-top">
+                            <img src="/img/1/1-1.png" alt="" class="animate__animated animate__fadeInUp animate__delay-08s">
+                            <div class="table-my animate__animated animate__fadeInUp animate__delay-08s">
+                                <div class="table-my-title">
+                                    <span>34,4 m²</span>
+                                    <span>Кол-во в одном <br> блоке</span>
+                                    <span>Кол-во всег</span>
+                                </div>
+                                <div>
+                                    <span>Блок 1</span>
+                                    <span>9</span>
+                                    <span>36</span>
+                                </div>
+                                <div>
+                                    <span>Блок 2</span>
+                                    <span>9</span>
+                                    <span>9</span>
+                                </div>
+                                <div>
+                                    <span>Блок 3</span>
+                                    <span>9</span>
+                                    <span>9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blocks-main-left-bottom">
+                            <img src="/img/1/1-2.png" alt="" class="animate__animated animate__fadeInUp animate__delay-08s">
+                        </div>
                     </div>
-                    <div class="my-col-2 contact-right ">
-                        <h3 class="animate__animated animate__fadeInUp animate__delay-04s">Хотите узнать больше?</h3>
-                        <p class="pt-1r animate__animated animate__fadeInUp animate__delay-04s">Приглашаем Вас посетить офис продаж.</p>
-                        <h3 class="pt-1r animate__animated animate__fadeInUp animate__delay-08s" >+998 93 730 55 55</h3>
-                        <h3 class="animate__animated animate__fadeInUp animate__delay-08s" >+998 93 730 55 55</h3>
-                        <p class="work animate__animated animate__fadeInUp animate__delay-1-2s">Пн-Пт: 09:00-21:00 / Сб-Вс: 09:30-20:00</p>
-                        <p class="worke-info animate__animated animate__fadeInUp animate__delay-1-2s">или оставьте Ваши контактные данные и Ваш <br> персональный менеджер предоставит <br> более подробную информацию</p>
-                        <form action="" class="center-form animate__animated animate__fadeInUp animate__delay-1-2s">
-                            <input type="text" class="form-input" placeholder="Ваше имя">
-                            <input type="text" class="form-input" placeholder="Ваш телефон">
-                            <button>Отправить</button>
-                        </form>
+                    <div class="blocks-main-right">
+                        <img src="/img/1/1-3.jpg" alt="" class="animate__animated animate__fadeInDown animate__delay-08s">
+                        <div class="blocks-main-right-info animate__animated animate__fadeInDown animate__delay-08s">
+                            <h2>1 Блок</h2>
+                            <p>Стройматериалы</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,26 +117,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/slider.js"></script>
-    <script>
-        $(document).ready(function() {
-            //   Users can skip the loading process if they want.
-            $('.skip').click(function() {
-                $('.overlay, body').addClass('loaded');
-            })
-
-            //   Will wait for everything on the page to load.
-            $(window).bind('load', function() {
-                $('.overlay, body').addClass('loaded');
-                setTimeout(function() {
-                    $('.overlay').css({'display':'none'})
-                }, 2000)
-            });
-
-            // Will remove overlay after 1min for users cannnot load properly.
-            setTimeout(function() {
-                $('.overlay, body').addClass('loaded');
-            }, 10000);
-        })
-    </script>
 </body>
 </html>
