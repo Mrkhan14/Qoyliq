@@ -129,7 +129,7 @@
 }
 .slider_main_block .navi>div.is-active:after {
     width: 60px;
-    background-color: #fff;
+    /* background-color: #fff; */
     animation: translating11 5s linear
 }
 .slider_main_block.is-stoped .navi>div.is-active:after {
