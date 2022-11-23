@@ -13,8 +13,10 @@ body{
 .main-bg{
    background-color: #004460; 
    background-color: #284459;
-   
 }
+.red-bg{
+    background-color: #b33231;
+ }
 a{
     text-decoration: none;
 }
@@ -382,7 +384,7 @@ p{
     text-align: center;
 }
 .f-about{
-    margin-top: 140px;
+    margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -451,9 +453,17 @@ p{
     width: 50%;
     height: 100%;
     background: #f2f4f7;
-    background: #004460;
+    background-color: #004460;
     transition: 1s cubic-bezier(0.77, 0, 0.18, 1);
     transition-delay: 0.8s;
+}
+#loader .overlay .overlayDoor:before {
+    background-image: url(../img/lodor-left.png);
+    background-position: left;
+}
+#loader .overlay .overlayDoor:after {
+    background-image: url(../img/lodor-right.png);
+    background-position: right;
 }
 
 #loader .overlay .overlayDoor:before {
@@ -512,15 +522,15 @@ p{
 #loader .loader>span {
     display: inline-block;
     /* background-color: #ff9000; */
-    width: 50px;
-    height: 0px;
-    border-radius: 50%;
-    margin: 0 8px;
+    /* width: 50px; */
+    /* height: 0px; */
+    /* border-radius: 50%; */
+    /* margin: 0 8px; */
     transform: translate3d(0);
     /* animation: bounce 5s infinite alternate; */
 }
 #loader .loader>span img{
-    width: 100px;
+    width: 200px;
 }
 /* #loader .loader>span:nth-child(2) {
     background-color: #5a0093;
@@ -700,4 +710,33 @@ p{
 .btns a:hover{
     color: #fff;
     border-color: #fff;
+}
+.o-c-text{
+    width: max(66%, 500px);
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.developer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.z-logo{
+    width: 200px;
+    margin: 20px;
+}
+.z-histori{
+    margin-top: 30px;
+    width: 90%;
+}
+.developer p{
+    color: #fff;
+    text-align: justify;
+    margin-bottom: 20px;
 }
