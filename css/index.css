@@ -761,3 +761,7 @@ p{
     width: 42%;
     z-index: -1;
 }
+.left-ig{
+    left: -152px;
+    transform: rotate(50deg);
+}
