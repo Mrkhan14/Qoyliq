@@ -9,6 +9,7 @@ body{
     text-align: left;
     background-color: #f2f4f7;
     background-color: #f2f2f2;
+    overflow: hidden;
 }
 .main-bg{
    background-color: #004460; 
@@ -47,6 +48,9 @@ p{
 }
 .color-black .menu-site a span {
     color: #fff !important;
+}
+.color-black .menu-site a.actione-menu span{
+    color: #d0a361 !important;
 }
 
 @media (min-width: 576px){
@@ -212,12 +216,17 @@ p{
   -webkit-transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
+.menu-site  a.actione-menu span:before, 
+.menu-site  a.actione-menu span:after{
+    background-color: #d0a361;
+}
 .menu-site a span:hover:after {
     background: transparent;
     width: 100%;
     -webkit-transition: 0s;
     transition: 0s;
-  }
+}
+
 .left-bar{
     background:#004460de;
     border-right:1px solid #e5e5e5;
@@ -251,6 +260,10 @@ p{
     font-size: 1.2rem;
     margin: 0.4rem 0;
 }
+.left-bar-menu  .menu-site a.actione-menu{
+    color: #d0a361 !important;
+}
+
 .left-bar-menu  .tel{
     margin: 0.4rem 0;
 }
@@ -739,4 +752,12 @@ p{
     color: #fff;
     text-align: justify;
     margin-bottom: 20px;
+}
+.or-q-fon{
+    position: absolute;
+    bottom: -100px;
+    right: -150px;
+    transform: rotate(321deg);
+    width: 42%;
+    z-index: -1;
 }
