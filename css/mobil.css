@@ -1,0 +1,21 @@
+@media only screen and (max-width: 1024px) {
+    .h-tel-number{
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .slider_main_block .site-slider__description{
+        line-height: 1.8rem;
+        margin-top: 10px;
+    }
+    .header-my .container{
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+    
+}
+@media only screen and (max-width: 400px) {
+    .slider_main_block .site-slider__description{
+        line-height: 1.5rem;
+    }
+}
