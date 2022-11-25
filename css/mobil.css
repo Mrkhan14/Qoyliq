@@ -2,6 +2,13 @@
     .h-tel-number{
         display: none;
     }
+    .none-hidden #center-h-full,
+    .none-hidden{
+        overflow: initial;
+    }
+    .pt-mobil-90{
+        padding-top: 110px;
+    }
 }
 @media only screen and (max-width: 768px) {
     .slider_main_block .site-slider__description{
@@ -12,10 +19,68 @@
         margin-right: 0rem;
         margin-left: 0rem;
     }
+    .mobil-full{
+        width: 100%;
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+    .mobil-blocks{
+       display: block; 
+       position: relative;
+    }
+    .blocks-main-left, .blocks-main-right {
+        width: 100%;
+        position: initial;
+    }
+    .blocks-main-right-info{
+        top: 0;
+    }
+    .blocks-main-left-top{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .table-my {
+        margin-top: 0rem;
+    }
+    
+    .blocks-main-right img {
+        padding-top: 1rem;
+    }
+    .logo img {
+        width: 60px;
+    }
+    .width130{
+        width: 130px;
+    }
     
 }
 @media only screen and (max-width: 400px) {
     .slider_main_block .site-slider__description{
         line-height: 1.5rem;
+    }
+    .left-bar-menu:hover .left-bar {
+        width: 90%;
+        background: #004460;
+        transition: all 0.50 s ease-in-out;
+    }
+    .table-my>div span {
+        width: 90px;
+        font-size: 9px;
+    }
+    .links-blocks a {
+        width: 30px;
+        height: 30px;
+    }
+    .blocks-main-right-info p {
+        font-size: 0.9rem;
+        text-align: right;
+    }
+    .blocks-main-right-info h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+        text-align: right;
+    }
+    .social-networks a {
+        margin: 0 0.2rem;
     }
 }
