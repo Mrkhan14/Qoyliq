@@ -759,13 +759,14 @@ p{
     margin: 20px;
 }
 .z-histori{
-    margin-top: 30px;
+    margin: 20px 0;
     width: 90%;
 }
 .developer p{
     color: #fff;
     text-align: justify;
     margin-bottom: 20px;
+    font-size: 14px;
 }
 .or-q-fon{
     position: absolute;

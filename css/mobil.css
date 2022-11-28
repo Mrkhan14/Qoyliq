@@ -9,6 +9,15 @@
     .pt-mobil-90{
         padding-top: 110px;
     }
+    .o-c-text{
+        width: 100%;
+    }
+    .o-c-text{
+        margin-top: 0;
+    }
+    .mobil-about .my-col-2{
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 768px) {
     .slider_main_block .site-slider__description{
@@ -52,7 +61,15 @@
     .width130{
         width: 130px;
     }
-    
+    .or-q-fon{
+        display: none;
+    }
+    .pt-105.md-t{
+        padding-top: 80px;
+    }
+    .contact-left iframe {
+        height: calc(40vh - 105px);
+    }
 }
 @media only screen and (max-width: 400px) {
     .slider_main_block .site-slider__description{
@@ -83,4 +100,8 @@
     .social-networks a {
         margin: 0 0.2rem;
     }
+    .center-form{
+        width: 100%;
+    }
+
 }
