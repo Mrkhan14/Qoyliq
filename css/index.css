@@ -273,7 +273,8 @@ p{
     font-size: 1.2rem;
     margin: 0.4rem 0;
 }
-.left-bar-menu  .menu-site a.actione-menu{
+.left-bar-menu  .menu-site a.actione-menu,
+.mobil-nav  .menu-site a.actione-menu{
     color: #d0a361 !important;
 }
 
@@ -762,7 +763,7 @@ p{
 }
 .z-histori{
     margin: 20px 0;
-    width: 90%;
+    width: 75%;
 }
 .developer p{
     color: #fff;
@@ -870,4 +871,11 @@ p{
     transition: 0.5s;
     padding-bottom: 3.438rem;
     background-color: #004460;
+}
+.width130{
+    width: 200px !important;
+}
+.block-3-a{
+    width: 100%;
+    justify-content: space-around;
 }

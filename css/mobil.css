@@ -115,5 +115,7 @@
     .center-form{
         width: 100%;
     }
-
+    .developer p{
+        font-size: 12px;
+    }
 }
