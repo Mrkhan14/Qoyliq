@@ -1,3 +1,9 @@
+/* .left-bar-menu{
+     display: block;
+} */
+.mobil-menu {
+    display: none;
+}
 @media only screen and (max-width: 1024px) {
     .h-tel-number{
         display: none;
@@ -17,6 +23,12 @@
     }
     .mobil-about .my-col-2{
         width: 100%;
+    }
+    .left-bar-menu{
+        display: none;
+    }
+    .mobil-menu {
+        display: block;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -68,7 +80,7 @@
         padding-top: 80px;
     }
     .contact-left iframe {
-        height: calc(40vh - 105px);
+        height: calc(45vh - 105px);
     }
 }
 @media only screen and (max-width: 400px) {

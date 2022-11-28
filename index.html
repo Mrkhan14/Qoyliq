@@ -74,6 +74,9 @@
                             </div>
                         </nav>
                     </div>
+                    <div class="mobil-menu haburger click">
+                        <i class="fa-solid fa-bars"></i> Меню 
+                    </div>
                 </div>
                 <div class="logo">
                     <a href="index.html">
@@ -157,41 +160,41 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/slider.js"></script>
-        <script type="text/javascript">
-        if (document.querySelector('.slider_main_block') != null) {
-    
-            if (window.innerWidth < 750) {
-                document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-mobile') + '); background-size:cover;background-position:bottom center;')
-            }
-            if (window.innerWidth > 749 && window.innerWidth < 1185) {
-                document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-tablet') + '); background-size:cover;background-position:bottom center;')
-            }
-            if (window.innerWidth > 1184) {
-                document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-desktop') + ');background-size:cover;background-position:bottom center;')
-            }
+    <script type="text/javascript">
+    if (document.querySelector('.slider_main_block') != null) {
+
+        if (window.innerWidth < 750) {
+            document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-mobile') + '); background-size:cover;background-position:bottom center;')
         }
-        </script>
-        <script>
-            $(document).ready(function() {
-                //   Users can skip the loading process if they want.
-                $('.skip').click(function() {
-                    $('.overlay, body').addClass('loaded');
-                })
-    
-                //   Will wait for everything on the page to load.
-                $(window).bind('load', function() {
-                    $('.overlay, body').addClass('loaded');
-                    setTimeout(function() {
-                        $('.overlay').css({'display':'none'})
-                    }, 2000)
-                });
-    
-                // Will remove overlay after 1min for users cannnot load properly.
-                setTimeout(function() {
-                    $('.overlay, body').addClass('loaded');
-                }, 60000);
+        if (window.innerWidth > 749 && window.innerWidth < 1185) {
+            document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-tablet') + '); background-size:cover;background-position:bottom center;')
+        }
+        if (window.innerWidth > 1184) {
+            document.querySelector('.slider_main_block').setAttribute('style', 'background-image:url(' + document.querySelector('.slider_main_block').getAttribute('data-desktop') + ');background-size:cover;background-position:bottom center;')
+        }
+    }
+    </script>
+    <script>
+        $(document).ready(function() {
+            //   Users can skip the loading process if they want.
+            $('.skip').click(function() {
+                $('.overlay, body').addClass('loaded');
             })
-        </script>
-      <!-- Area End [SliderMain] -->
+
+            //   Will wait for everything on the page to load.
+            $(window).bind('load', function() {
+                $('.overlay, body').addClass('loaded');
+                setTimeout(function() {
+                    $('.overlay').css({'display':'none'})
+                }, 2000)
+            });
+
+            // Will remove overlay after 1min for users cannnot load properly.
+            setTimeout(function() {
+                $('.overlay, body').addClass('loaded');
+            }, 60000);
+        })
+    </script>
+    <!-- Area End [SliderMain] -->
 </body>
 </html>
