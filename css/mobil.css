@@ -30,6 +30,20 @@
     .mobil-menu {
         display: block;
     }
+    .slider-content__item{
+        align-items: flex-start;
+    }
+    .slider-content__item img{
+        height: 75vh;
+        object-fit: cover;
+    }
+    .slider-content__controls{
+        top: 41%;
+    }
+    .slider-content__controls .dots {
+        top: 50%;
+        bottom: initial;
+    }
 }
 @media only screen and (max-width: 768px) {
     .slider_main_block .site-slider__description{
