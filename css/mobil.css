@@ -96,6 +96,12 @@
     .contact-left iframe {
         height: calc(45vh - 105px);
     }
+    .social-networks a {
+        color: #fff;
+        font-size: 1rem;
+        margin: 0 0 0 0.5rem;
+    }
+
 }
 @media only screen and (max-width: 400px) {
     .slider_main_block .site-slider__description{

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/animate.min.css"/>
+
+    <link rel="stylesheet" href="css/slider.css">
+        <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mobil.css">
+    <title>Qo'yliq bozori</title>
+    <style>
+        .main-bg.loaded .clouds{
+            z-index: 0;
+            /* position: relative; */
+        }
+        .clouds {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+        .clouds:before,
+        .clouds:after,
+        .clouds span:before,
+        .clouds span:after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            /* background: #f2f4f7;
+            background: #004460; */
+            transition: 1s cubic-bezier(0.77, 0, 0.18, 1);
+            transition-delay: 0.8s;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .clouds:before {
+            right: 50%;
+            background-image: url(./img/clouds1.png);
+        }
+        .clouds:after {
+            left: 50%;
+            background-image: url(./img/clouds1.png);
+        }
+        .clouds span:before {
+            left: 0;
+            background-image: url(./img/clouds1.png);
+            transform: rotate(180deg);
+        }
+        .clouds span:after {
+            right: 0;
+            background-image: url(./img/clouds1.png);
+            transform: rotate(180deg);
+        }
+        .loaded .clouds span:before{
+            left: -50%;
+        }
+        .loaded .clouds:before {
+            right: -100%;
+        }
+        .loaded .clouds span:after{
+            right: -50%;
+        }
+        .loaded .clouds:after {
+            left: -100%;
+        }
+        /* .full-img-obekt{
+            background-color: #fff;
+            animation: translating11 5s linear
+        }
+        @keyframes translating11 {
+            0% {
+            -webkit-transform: translateX(-100%)
+            }
+
+            to {
+            -webkit-transform: translateX(0%)
+            }
+        } */
+        .loaded .full-img-obekt{
+            -webkit-transform: scale(1);
+            /* transition: -webkit-transform 5s, visibility 2s, opacity 2s;
+            opacity: 1;
+            visibility: visible;
+            z-index: 0; */
+        }
+        .full-img-obekt {
+            -webkit-transform: scale(0.9);
+            transition: 2s;
+        }
+        .img-back{
+            background-image: url(img/fon-1.jpg);
+        }
+        .main-bg.loaded  g:hover .object-svg__container {
+            opacity: 1 !important;
+        }
+        .main-bg.loaded .p-z-1051 {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="main-bg">
+    <header class="header-my">
+        <div class="container">
+            <div class="h-top">
+                <div class="languages w-300">
+                    <div class="left-bar-menu">
+                        <span><i class="fa-solid fa-bars"></i> Меню </span> 
+                        <nav id="left-bar" class="left-bar">
+                            <div class="left-login">
+                                <img src="img/logo-g.png" alt="">
+                            </div>
+                            <div class="len links-blocks">
+                                <a href="#" class="actione">uz</a>
+                                <a href="#">ru</a>
+                                <a href="#">en</a>
+                            </div>
+                            <div class="b-top">
+                                <div class="menu-site">
+                                    <a href="index.html">
+                                        <span>Главная</span>
+                                    </a>
+                                    <a  class="actione-menu" href="blocks.html">
+                                        <span>Блоки</span>
+                                    </a>
+                                    <a href="comfortable.html">
+                                        <span>Информация</span>
+                                    </a>
+                                    <a href="oproekt.html">
+                                        <span>О проекте</span>
+                                    </a>
+                                    <a href="developer.html">
+                                        <span>Застройщик </span>
+                                    </a>                                    
+                                    <a href="galireya.html">
+                                        <span>Галерея</span>
+                                    </a>
+                                    <a href="contact.html">
+                                        <span>Контакты</span>
+                                    </a>
+                                </div>
+                                <div class="tel">
+                                    <a href="#">+99893 870 99 99</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="mobil-menu haburger click">
+                        <i class="fa-solid fa-bars"></i> Меню 
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="social-networks  w-320">
+                    <a class="h-tel-number" href="#"><i class="fa-solid fa-phone"></i> <span>+99893 8709999</span> </a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a> 
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a> 
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="center-h-full" class="img-back">
+            <img class="full-img-obekt" src="img/fon-1.jpg" alt="">
+            <!-- <div class="p-z-1051 ">
+                <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+                <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1920" height="1080" viewBox="0 0 1920 1080" xml:space="preserve">
+                    <g transform="matrix(1 0 0 1 762.08 598.44)" id="vf67M6R_F2_fXtlfSV3Td"  >
+                        <a href="#"> 
+                            <path class="object-svg__container" style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.87; fill-rule: nonzero; opacity: 0;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -143.37662 -43.63636 L 35.84415999999999 -121.55843999999999 L 60.77921999999999 -81.03895999999999 L 82.5974 -88.83116999999999 L 143.37662 37.40260000000002 L -68.57142999999999 121.55844000000002 z" stroke-linecap="round" />
+                        </a>
+                    </g>
+                    <g transform="matrix(1 0 0 1 518.96 881.69)" id="Hw45L6bc_dFYWyAggXm23"  >
+                        <a href="#"> 
+                            <path class="object-svg__container" style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.87; fill-rule: nonzero; opacity: 0;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -10.90909 -197.53247 L 187.01299 -113.37662999999999 L 14.025980000000004 197.53246000000001 L -187.01298 111.03895000000001 z" stroke-linecap="round" />
+                        </a>
+                    </g>
+                    <g transform="matrix(1 0 0 1 1002.35 498.8)" id="TImh3Oo0MPB0uBM5WyZ4c"  >
+                        <a href="#">
+                            <path class="object-svg__container" style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.87; fill-rule: nonzero; opacity: 0;" vector-effect="non-scaling-stroke"  transform=" translate(-137.68, -121.01)" d="M 0 73.91305 L 173.91304 0 L 189.13043 13.04348 L 197.82608 7.97102 L 275.36231 163.76813 L 78.26086999999998 242.029 L 57.97101999999998 238.40581 L 1.4492799999999804 126.08696 L 23.18840999999998 115.94203 z" stroke-linecap="round" />
+                        </a>    
+                    </g>
+                </svg>
+            </div> -->
+            <div class="area-layer p-absolute w-100 h-100"></div>
+            <div class="clouds">
+                <span></span>
+            </div>
+        </section>
+        <!-- end Section Slider -->
+
+            <!-- mobil-nav-menu -->
+    <section class="mobil-nav">
+        <div class="mobli-left">
+            <div class="haburger click2 ">
+                <span class="span2"></span>
+                <span class="span3"></span>
+            </div>
+            <div class="left-login">
+                <img src="img/logo-g.png" alt="">
+            </div>
+            <div class="len links-blocks">
+                <a href="#" class="actione">uz</a>
+                <a href="#">ru</a>
+                <a href="#">en</a>
+            </div>
+            <div class="b-top">
+                <div class="menu-site">
+                    <a href="index.html">
+                        <span>Главная</span>
+                    </a>
+                    <a class="actione-menu" href="blocks.html">
+                        <span>Блоки</span>
+                    </a>
+                    <a href="comfortable.html">
+                        <span>Информация</span>
+                    </a>
+                    <a href="oproekt.html">
+                        <span>О проекте</span>
+                    </a>
+                    <a href="developer.html">
+                        <span>Застройщик</span>
+                    </a>
+                    <a href="galireya.html">
+                        <span>Галерея</span>
+                    </a>
+                    <a href="contact.html">
+                        <span>Контакты</span>
+                    </a>
+                </div>
+                <div class="tel">
+                    <a href="#">+99893 870 99 99</a>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- end mobil-nav-menu -->
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/slider.js"></script>
+      <script>
+            $(document).ready(function() {
+                //   Users can skip the loading process if they want.
+                $('.skip').click(function() {
+                    $('.overlay, body').addClass('loaded');
+                })
+    
+                //   Will wait for everything on the page to load.
+                $(window).bind('load', function() {
+                    $('.overlay, body').addClass('loaded');
+                    setTimeout(function() {
+                        $('.overlay').css({'display':'none'})
+                    }, 3000)
+                });
+    
+                // Will remove overlay after 1min for users cannnot load properly.
+                setTimeout(function() {
+                    $('.overlay, body').addClass('loaded');
+                }, 3000);
+            })
+        </script>
+</body>
+</html>
