@@ -7,13 +7,83 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="css/animate.min.css"/>
-    
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/mobil.css">
+    <style>
+       .trigger{
+            text-align: center;
+            padding: 7px 13px;
+            background: #3e3e3e;
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            font-family: cursive;
+        }
 
+        .modal {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 1055;
+        }
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:#004460;
+            padding: 1rem 1.5rem;
+            width: 90%;
+            height: 90vh;
+            border-radius: 0.5rem;
+            z-index: 1056;
+        }
+        .close-button {
+            float: right;
+            width: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 0.25rem;
+            background-color: lightgray;
+        }
+        .close-button:hover {
+            background-color: darkgray;
+        }
+        .show-modal {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1.0);
+            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+        }
+        .modal-order{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .modal-order-left,
+        .modal-order-right{
+            width: 50%;
+        }
+        .modal-order-left img{
+            width: 100%;
+        }
+        .modal-order-right .table-my>div span {
+            width: 180px;
+            font-size: 15px;
+        }
+    </style>
     <title>Qo'yliq bozori</title>
 </head>
-<body class="color-black none-hidden">
+<body class="main-bg none-hidden">
     <header class="header-my">
         <div class="container">
             <div class="h-top">
@@ -34,18 +104,21 @@
                                     <a href="index.html">
                                         <span>Главная</span>
                                     </a>
-                                    <a href="blocks.html">
+                                    <a  class="actione-menu" href="blocks.html">
                                         <span>Блоки</span>
                                     </a>
                                     <a href="comfortable.html">
+                                        <span>Комфортный</span>
+                                    </a>
+                                    <a href="abote.html">
                                         <span>Информация</span>
                                     </a>
-                                    <a  class="actione-menu" href="oproekt.html">
+                                    <a href="oproekt.html">
                                         <span>О проекте</span>
                                     </a>
                                     <a href="developer.html">
                                         <span>Застройщик </span>
-                                    </a>
+                                    </a>                                    
                                     <a href="galireya.html">
                                         <span>Галерея</span>
                                     </a>
@@ -65,7 +138,7 @@
                 </div>
                 <div class="logo">
                     <a href="index.html">
-                        <img src="img/logo-d.png" alt="">
+                        <img src="img/logo.png" alt="">
                     </a>
                 </div>
                 <div class="social-networks  w-320">
@@ -81,67 +154,56 @@
     </header>
     <main>
         <section id="center-h-full">
-            <div class="container-c mobil-full  pt-105">
-                <h4 class="o-c-text animate__animated animate__fadeInUp animate__delay-08s">
-                    Масштабный проект Qo’yliq Katta Bozori является одним из 
-                    крупнейших торговых комплексов в Узбекистане и 
-                    располагается на земельном участке более чем в 50 
-                    гектаров.
-                </h4>
-                <div class="f-about">
-                    <div class="itme-f-about animate__animated animate__fadeInLeft animate__delay-08s">
-                        <i class="fa-regular fa-clock"></i>
-                        <p>Рабочее время</p>
-                        <h3>24/7</h3>
+            <div class="container  mobil-full pt-105">
+                <button class="trigger">Click the modal!</button>
+            </div>
+        </section>
+    </main>
+    <!-- <footer></footer> -->
+    
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <div class="modal-order">
+                <div class="modal-order-left">
+                    <img src="https://qoyliq.gohouse.uz/vendor/bek96/album/images//initial/2022-11-11-00-05-22-13.png" alt="">
+                </div>
+                <div class="modal-order-right">
+                    <div class="blocks-main-right-info animate__animated animate__fadeInDown animate__delay-08s">
+                        <h2>2 Блок</h2>
+                        <p>Бытовой</p>
                     </div>
-                    <div class="itme-f-about animate__animated animate__fadeInLeft animate__delay-08s">
-                        <i class="fa-solid fa-building-shield"></i>
-                        <p>Земельный участок проекта</p>
-                        <h3>более 50 Га</h3>
-                    </div>
-                    <div class="itme-f-about animate__animated animate__fadeInLeft animate__delay-08s">
-                        <i class="fa-solid fa-vector-square"></i>
-                        <p>Общая площадь застройки </p>
-                        <h3>более 600 000 m</h3>
-                    </div>
-                    <div class="itme-f-about animate__animated animate__fadeInLeft animate__delay-1-2s">
-                        <i class="fa-solid fa-list-check"></i>
-                        <p>Всего этапов</p>
-                        <h3>5</h3>
-                    </div>
-                    <div class="itme-f-about animate__animated animate__fadeInLeft animate__delay-1-2s">
-                        <i class="fa-solid fa-cubes"></i>
-                        <p>Всего блоков</p>
-                        <h3>210</h3>
-                    </div>
-                    <div class="itme-f-about animate__animated animate__fadeInLeft animate__delay-1-2s">
-                        <i class="fa-solid fa-store"></i>
-                        <p>Общее количество магазинов</p>
-                        <h3>более 7 000</h3>
-                    </div>
-                    <div class="itme-f-about animate__animated animate__fadeInLeft animate__delay-1-6s">
-                        <i class="fa-solid fa-solar-panel"></i>
-                        <p>Всего продаваемых m²</p>
-                        <h3>300 000 m²</h3>
-                    </div>
-                    <div class="itme-f-about animate__animated animate__fadeInLeft animate__delay-1-6s">
-                        <i class="fa-solid fa-parking"></i>
-                        <p>Удобная парковка</p>
-                        <h3>300 000 m²</h3>
-                    </div>
-                    <div class="itme-f-about animate__animated animate__fadeInLeft animate__delay-1-6s">
-                        <i class="fa-solid fa-hotel"></i>
-                        <p>Отель</p>
-                        <h3>3</h3>
+
+                    <div class="table-my animate__animated animate__fadeInUp animate__delay-08s">
+                        <div class="table-my-title">
+                            <span>Блок</span>
+                            <span>1</span>
+                        </div>
+                        <div>
+                            <span>Тип Базар</span>
+                            <span>Бытовой</span>
+                        </div>
+                        <div>
+                            <span>Этаж</span>
+                            <span>1</span>
+                        </div>
+                        <div>
+                            <span>Тип здания</span>
+                            <span>Базар</span>
+                        </div>
+                        <div>
+                            <span>Площадь, м 2</span>
+                            <span>24 м 2</span>
+                        </div>
+                        <div>
+                            <span>Тип</span>
+                            <span>Свободно</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <img class="or-q-fon " src="img/logo-fon-d.png" alt="">
-        </section>
-        <!-- end Section Slider -->
-    </main>
-    <!-- <footer></footer> -->
-
+        </div>
+    </div>
     <!-- mobil-nav-menu -->
     <section class="mobil-nav">
         <div class="mobli-left">
@@ -162,13 +224,13 @@
                     <a href="index.html">
                         <span>Главная</span>
                     </a>
-                    <a href="blocks.html">
+                    <a class="actione-menu"  href="blocks.html">
                         <span>Блоки</span>
                     </a>
                     <a href="comfortable.html">
                         <span>Информация</span>
                     </a>
-                    <a   class="actione-menu"  href="oproekt.html">
+                    <a href="oproekt.html">
                         <span>О проекте</span>
                     </a>
                     <a href="developer.html">
@@ -187,10 +249,27 @@
             </div>
         </div>
     </section>
-        <!-- end mobil-nav-menu -->
+    <!-- end mobil-nav-menu -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/raphael.min.js"></script>
+    <script>
+        var modal = document.querySelector(".modal");
+        var trigger = document.querySelector(".trigger");
+        var closeButton = document.querySelector(".close-button");
+        function toggleModal() {
+            modal.classList.toggle("show-modal");
+        }
+        function windowOnClick(event) {
+            if (event.target === modal) {
+                toggleModal();
+            }
+        }
+        trigger.addEventListener("click", toggleModal);
+        closeButton.addEventListener("click", toggleModal);
+        window.addEventListener("click", windowOnClick)
+    </script>
 </body>
 </html>
