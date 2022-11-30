@@ -41,7 +41,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color:#004460;
-            padding: 1rem 1.5rem;
+            /* padding: 1rem 1.5rem; */
             width: 90%;
             height: 90vh;
             border-radius: 0.5rem;
@@ -49,12 +49,21 @@
         }
         .close-button {
             float: right;
-            width: 1.5rem;
+            width: 3rem;
+            height: 3rem;
             line-height: 1.5rem;
             text-align: center;
             cursor: pointer;
             border-radius: 0.25rem;
-            background-color: lightgray;
+            background-color: white;
+            margin-top: -35px;
+            margin-right: -40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #004460;
         }
         .close-button:hover {
             background-color: darkgray;
@@ -73,12 +82,54 @@
         .modal-order-right{
             width: 50%;
         }
+        .modal-order-left {
+            background-color: #fff;
+            padding-right: 30px;
+            overflow: hidden;
+            height: 90vh;
+            border-radius: 0.5rem;
+        }
         .modal-order-left img{
             width: 100%;
+            background-color: #fff;
+        }
+        .modal-order-right{
+            padding: 30px;
         }
         .modal-order-right .table-my>div span {
             width: 180px;
             font-size: 15px;
+        }
+        .modal-order-right .center-form{
+            margin-top: 54px;
+            width: 100%;
+        }
+        .modal-order-right .center-form button {
+            background-color: #ffffff;
+            color: #004460;
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 30px;
+        }
+        .modal-order-right .center-form input{
+            border-bottom: 1px solid rgb(255 255 255 / 40%);
+            color: #ffffff;
+        }
+        .modal-order-right .center-form input::placeholder {
+            color: #ffffff;
+        }
+
+        .modal-order-right .center-form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #ffffff;
+        }
+
+        .modal-order-right .center-form input::-ms-input-placeholder { /* Microsoft Edge */
+            color: #ffffff;
+        }
+        .modal-order-right .btns a{
+            font-size: 1.2rem;
+            font-weight: 700;
         }
     </style>
     <title>Qo'yliq bozori</title>
@@ -163,7 +214,9 @@
     
     <div class="modal">
         <div class="modal-content">
-            <span class="close-button">×</span>
+            <span class="close-button">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
             <div class="modal-order">
                 <div class="modal-order-left">
                     <img src="https://qoyliq.gohouse.uz/vendor/bek96/album/images//initial/2022-11-11-00-05-22-13.png" alt="">
@@ -200,6 +253,14 @@
                             <span>Свободно</span>
                         </div>
                     </div>
+
+                    <form action="" class="center-form animate__animated animate__fadeInUp animate__delay-1-2s">
+                        <input type="text" class="form-input" placeholder="Ваше имя">
+                        <input type="text" class="form-input" placeholder="Ваш телефон">
+                        <div class="btns w-100">
+                            <a class="w-100 text-center" href="blocks-list.html">Оставьте заявку</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

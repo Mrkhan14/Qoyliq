@@ -730,6 +730,9 @@ p{
 .img-cover, .w-100 {
     width: 100%;
 }
+.text-center{
+    text-align: center;
+}
 /* full-img-obek */
 .btns a{
     color: #d0a361;
