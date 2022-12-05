@@ -40,7 +40,7 @@
             height: 100%;
             /* background: #f2f4f7;
             background: #004460; */
-            transition: 1s cubic-bezier(0.77, 0, 0.18, 1);
+            transition: 0.8s cubic-bezier(0.77, 0, 0.18, 1);
             transition-delay: 0.8s;
             background-repeat: no-repeat;
             background-size: contain;
@@ -107,13 +107,14 @@
 
         .full-img-obekt {
             -webkit-transform: scale(0.9);
-            transition: 2s;
+            transition: 0.7s;
         }
 
         .img-back {
             background-image: url(img/fon-1.jpg);
         }
 
+        .bg-hover.object-svg__container,
         .main-bg.loaded g:hover .object-svg__container {
             opacity: 1 !important;
         }
@@ -154,12 +155,16 @@
         }
 
         .object-svg__container {
-            top: -100px;
-            transition: all .75s;
+            top: 100px;
+            /* transition: all .75s; */
             width: 100%;
             left: 0;
         }
-
+        @media only screen and (max-height: 1080px) {
+            .object-svg__container {
+                top: -50px;
+            }
+        }
         .hidden {
             overflow: hidden;
         }
@@ -227,6 +232,7 @@
             visibility: visible;
             transform: translateY(0);
         }
+
         .alli:after {
             content: "";
             width: 0;
@@ -299,7 +305,7 @@
                 </div>
                 <div class="social-networks  w-320">
                     <a class="h-tel-number" href="#"><i class="fa-solid fa-phone"></i> <span>+99893 8709999</span> </a>
-                    <a href="blocks-list.html"><i class="fa-solid fa-map-location-dot"></i></a> 
+                    <a href="blocks-list.html"><i class="fa-solid fa-map-location-dot"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>
                     <a href="#"><i class="fa-brands fa-telegram"></i></a>
@@ -309,68 +315,64 @@
     </header>
     <main>
 
-        <div class="object-area p-absolute w-100 vh-100">
+        <div class="object-area p-absolute w-100 vh-100 mobil-top-78">
             <div class="object-background h-100">
                 <div class="object-svg p-relative vh-100">
                     <div class="object-svg__container p-absolute hidden">
                         <img src="img/fon-1.jpg" alt="Object Image" class="d-block">
                         <div class="area-layer p-absolute w-100 h-100"></div>
                         <div class="object-svg-wrap p-absolute" style="top: 0px;">
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                version="1.1" width="1920" height="1080" viewBox="0 0 1920 1080" xml:space="preserve">
-                                <g transform="matrix(1 0 0 1 762.08 598.44)" id="vf67M6R_F2_fXtlfSV3Td">
-                                    <a href="#">
-                                        <path data-floor="2" class="a1 object-svg__container"
-                                            style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.87; fill-rule: nonzero; opacity: 0;"
-                                            vector-effect="non-scaling-stroke" transform=" translate(0, 0)"
-                                            d="M -143.37662 -43.63636 L 35.84415999999999 -121.55843999999999 L 60.77921999999999 -81.03895999999999 L 82.5974 -88.83116999999999 L 143.37662 37.40260000000002 L -68.57142999999999 121.55844000000002 z"
-                                            stroke-linecap="round" />
-                                    </a>
-                                </g>
-                                <g transform="matrix(1 0 0 1 518.96 881.69)" id="Hw45L6bc_dFYWyAggXm23">
-                                    <a href="#">
-                                        <path data-floor="1" class="a1 object-svg__container"
-                                            style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.87; fill-rule: nonzero; opacity: 0;"
-                                            vector-effect="non-scaling-stroke" transform=" translate(0, 0)"
-                                            d="M -10.90909 -197.53247 L 187.01299 -113.37662999999999 L 14.025980000000004 197.53246000000001 L -187.01298 111.03895000000001 z"
-                                            stroke-linecap="round" />
-                                    </a>
-                                </g>
-                                <g transform="matrix(1 0 0 1 1002.35 498.8)" id="TImh3Oo0MPB0uBM5WyZ4c">
-                                    <a href="#">
-                                        <path data-floor="3" class="a1 object-svg__container"
-                                            style="stroke: rgb(0,0,0); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.87; fill-rule: nonzero; opacity: 0;"
-                                            vector-effect="non-scaling-stroke" transform=" translate(-137.68, -121.01)"
-                                            d="M 0 73.91305 L 173.91304 0 L 189.13043 13.04348 L 197.82608 7.97102 L 275.36231 163.76813 L 78.26086999999998 242.029 L 57.97101999999998 238.40581 L 1.4492799999999804 126.08696 L 23.18840999999998 115.94203 z"
-                                            stroke-linecap="round" />
-                                    </a>
-                                </g>
-                            </svg> -->
                             <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1920" height="1080" viewBox="0 0 1920 1080" xml:space="preserve">
-                                <g transform="matrix(1 0 0 1 517.64 879.08)" id="9pPls5rCJchmnUJqgMLF2"  >
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" width="1920" height="1080" viewBox="0 0 1920 1080" xml:space="preserve">
+                                <g transform="matrix(1 0 0 1 517.64 879.08)" id="id_svg_g">
                                     <a href="order.html">
-                                    <path data-floor="1 <br> Блок" class="a1 object-svg__container" style="stroke: rgb(68,68,102); stroke-opacity: 0; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.31; fill-rule: nonzero; opacity: 0;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -173.9726 111.64384 L 8.219179999999994 195.20548 L 179.45206 -111.64383999999998 L -7.534240000000011 -195.20547999999997 L -179.45205 106.84931000000006 z" stroke-linecap="round" />
+                                        <path data-floor="1 <br> Блок" class="a1 object-svg__container"
+                                            style="stroke: rgb(68,68,102); stroke-opacity: 0; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.31; fill-rule: nonzero; opacity: 0;"
+                                            vector-effect="non-scaling-stroke" transform=" translate(0, 0)"
+                                            onmousemove="showCoords(event)"
+                                            d="M -173.9726 111.64384 L 8.219179999999994 195.20548 L 179.45206 -111.64383999999998 L -7.534240000000011 -195.20547999999997 L -179.45205 106.84931000000006 z"
+                                            stroke-linecap="round" />
                                     </a>
                                 </g>
-                                <g transform="matrix(1 0 0 1 758.88 594.74)" id="XDgZA80HerxpGVE8WQhYK"  >
+                                <g transform="matrix(1 0 0 1 758.88 594.74)" id="id_svg_g">
                                     <a href="order.html">
-                                        <path data-floor="2  <br> Блок" class="a1 object-svg__container" style="stroke: rgb(68,68,102); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.31; fill-rule: nonzero; opacity: 0;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -139.5199 -41.05506 L -63.55933 122.45763 L -41.52543 122.45763 L 136.44067 46.18643999999999 L 144.49152 27.54236999999999 L 91.10169 -86.01695000000001 L 66.52542 -77.96610000000001 L 45.33897999999999 -122.45763000000001 L -144.49153 -50.000000000000014 z" stroke-linecap="round" />
+                                        <path data-floor="2  <br> Блок" class="a1 object-svg__container"
+                                            style="stroke: rgb(68,68,102); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.31; fill-rule: nonzero; opacity: 0;"
+                                            vector-effect="non-scaling-stroke" transform=" translate(0, 0)"
+                                            onmousemove="showCoords(event)"
+                                            d="M -139.5199 -41.05506 L -63.55933 122.45763 L -41.52543 122.45763 L 136.44067 46.18643999999999 L 144.49152 27.54236999999999 L 91.10169 -86.01695000000001 L 66.52542 -77.96610000000001 L 45.33897999999999 -122.45763000000001 L -144.49153 -50.000000000000014 z"
+                                            stroke-linecap="round" />
                                     </a>
                                 </g>
-                                <g transform="matrix(1 0 0 1 1001.11 498.68)" id="YJoK-Qx_HkYS_UHWODu5C"  >
+                                <g transform="matrix(1 0 0 1 1001.11 498.68)" id="id_svg_g">
                                     <a href="order.html">
-                                        <path data-floor="3  <br> Блок" class="a1 object-svg__container" style="stroke: rgb(68,68,102); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.31; fill-rule: nonzero; opacity: 0;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -133.10345 -49.48276 L -114.48276000000001 -8.793099999999995 L -136.20690000000002 1.5517300000000045 L -81.72414000000002 115.68966 L -61.034480000000016 122.93104000000001 L 125.86206999999997 49.137940000000015 L 136.20689999999996 30.172420000000013 L 61.72413999999996 -117.06895999999998 L 33.10344999999997 -122.93102999999998 L -136.20689000000004 -53.96550999999998 L -133.10344000000003 -49.48274999999998" stroke-linecap="round" />
+                                        <path data-floor="3  <br> Блок" class="a1 object-svg__container"
+                                            style="stroke: rgb(68,68,102); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.31; fill-rule: nonzero; opacity: 0;"
+                                            vector-effect="non-scaling-stroke" transform=" translate(0, 0)"
+                                            onmousemove="showCoords(event)"
+                                            d="M -133.10345 -49.48276 L -114.48276000000001 -8.793099999999995 L -136.20690000000002 1.5517300000000045 L -81.72414000000002 115.68966 L -61.034480000000016 122.93104000000001 L 125.86206999999997 49.137940000000015 L 136.20689999999996 30.172420000000013 L 61.72413999999996 -117.06895999999998 L 33.10344999999997 -122.93102999999998 L -136.20689000000004 -53.96550999999998 L -133.10344000000003 -49.48274999999998"
+                                            stroke-linecap="round" />
                                     </a>
                                 </g>
-                                <g transform="matrix(1 0 0 1 1220.21 406.01)" id="0B5KPBh8BnGDROGogBHYx"  >
+                                <g transform="matrix(1 0 0 1 1220.21 406.01)" id="id_svg_g">
                                     <a href="#">
-                                        <path data-floor="4  <br> Скоро" class="a1 object-svg__container" style="stroke: rgb(68,68,102); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.31; fill-rule: nonzero; opacity: 0;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -143.06931 -30.75985 L -129.20792 -51.980199999999996 L 46.03960000000001 -123.76238 L 70.29703 -115.34653999999999 L 143.06931 30.693060000000017 L 132.17822 50.990090000000016 L -45.54454999999999 123.76237 L -70.29702999999998 117.82178 z" stroke-linecap="round" />
+                                        <path data-floor="4  <br> Скоро" class="a1 object-svg__container"
+                                            style="stroke: rgb(68,68,102); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.31; fill-rule: nonzero; opacity: 0;"
+                                            vector-effect="non-scaling-stroke" transform=" translate(0, 0)"
+                                            onmousemove="showCoords(event)"
+                                            d="M -143.06931 -30.75985 L -129.20792 -51.980199999999996 L 46.03960000000001 -123.76238 L 70.29703 -115.34653999999999 L 143.06931 30.693060000000017 L 132.17822 50.990090000000016 L -45.54454999999999 123.76237 L -70.29702999999998 117.82178 z"
+                                            stroke-linecap="round" />
                                     </a>
                                 </g>
-                                <g transform="matrix(1 0 0 1 1448.92 314.92)" id="rdTZP84we_SbIVjyOIph8"  >
+                                <g transform="matrix(1 0 0 1 1448.92 314.92)" id="id_svg_g">
                                     <a href="#">
-                                        <path data-floor="5 <br> Скоро" class="a1 object-svg__container" style="stroke: rgb(68,68,102); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.31; fill-rule: nonzero; opacity: 0;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -142.57426 -33.17327 L -128.21782000000002 -53.96040000000001 L 55.44554999999997 -126.73268 L 66.83168999999997 -120.79209 L 142.57425999999998 29.70295999999999 L 142.57425999999998 45.04948999999999 L -42.574250000000006 122.27721 L -50.49504 126.73266 L -68.81187 118.31681999999999 z" stroke-linecap="round" />
+                                        <path data-floor="5 <br> Скоро" class="a1 object-svg__container"
+                                            style="stroke: rgb(68,68,102); stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,68,96); fill-opacity: 0.31; fill-rule: nonzero; opacity: 0;"
+                                            vector-effect="non-scaling-stroke" transform=" translate(0, 0)"
+                                            onmousemove="showCoords(event)"
+                                            d="M -142.57426 -33.17327 L -128.21782000000002 -53.96040000000001 L 55.44554999999997 -126.73268 L 66.83168999999997 -120.79209 L 142.57425999999998 29.70295999999999 L 142.57425999999998 45.04948999999999 L -42.574250000000006 122.27721 L -50.49504 126.73266 L -68.81187 118.31681999999999 z"
+                                            stroke-linecap="round" />
                                     </a>
                                 </g>
                             </svg>
@@ -379,7 +381,7 @@
                 </div>
             </div>
         </div>
-        <div class="alli rounded p-absolute text-center" id="result">
+        <div class="alli rounded p-absolute text-center" id="result" style="left: -150px;">
 
             <div class="bb-title">Блок</div>
         </div>
@@ -463,20 +465,22 @@
     <script>
         var clas = document.getElementsByClassName("a1");
 
+        function showCoords(event) {
+            // console.log(event);
+            var left = event.clientX - 70;
+            var top = event.clientY - 170;
+            document.getElementById("result").style.top = top + 'px';
+            document.getElementById("result").style.left = left + 'px';
+
+        }
+
         for (var i = 0; i < clas.length; i++) {
             (function (index) {
-                clas[index].addEventListener("mouseover",  (e) => {
+                clas[index].addEventListener("mouseover", (e) => {
                     console.log("Clicked index: " + index);
                     const element = e.target.getBoundingClientRect();
-                    const left = element.left;
-                    const top = element.top;
                     const floor = e.target.dataset.floor;
-                    
-                    document.getElementById("result").style.top = top + 'px';
-                    document.getElementById("result").style.left = left + 'px';
                     document.getElementById("result").innerHTML = floor;
-                    
-                    console.log(`Left: ${left}, Top: ${top}`);
                 })
             })(i);
         }

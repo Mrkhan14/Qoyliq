@@ -182,6 +182,8 @@
 .app_links{
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 1051;
 }
 .button-main-slider {
     font-size: 1.2rem;
