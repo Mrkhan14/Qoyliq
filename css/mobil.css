@@ -107,9 +107,23 @@
         font-size: 1rem;
         margin: 0 0 0 0.5rem;
     }
+    .blocks-main-right-info p {
+        font-size: 0.9rem;
+        text-align: right;
+    }
+    .blocks-main-right-info h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+        text-align: right;
+    }
+    .btns a {
+        padding: 5px 12px;
+        font-size: 13px;
+        margin-top: 0px;
+    }
 
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .slider_main_block .site-slider__description{
         line-height: 1.5rem;
     }
@@ -143,5 +157,69 @@
     }
     .developer p{
         font-size: 12px;
+    }
+    .btns a {
+        padding: 3px 12px;
+        font-size: 10px;
+        margin-top: 0px;
+    }
+    .img-3-2-3,
+    .img-2-2-3,
+    .img-1-2-3{
+        text-align: center;
+    }
+    .img-1-2-3 img{
+        width: 290px;
+    }
+    .img-2-2-3 img{
+        width: 280px;
+    }
+    .img-3-2-1 img{
+        width: 140px !important;
+    }
+    .img-3-2-2 img{
+        width: 200px;
+    }
+    .img-3-2-3 img{
+        width: 290px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .btns a {
+        padding: 3px 12px;
+        font-size: 10px;
+        margin-top: 0px;;
+    }
+    .blocks-main-right-info h2 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        text-align: right;
+    }
+    .blocks-main-right-info p {
+        font-size: 0.7rem;
+        text-align: right;
+    }
+    .pt-105 {
+        padding-top: 90px;
+    }
+    .img-3-2-3,
+    .img-2-2-3,
+    .img-1-2-3{
+        text-align: center;
+    }
+    .img-1-2-3 img{
+        width: 290px;
+    }
+    .img-2-2-3 img{
+        width: 280px;
+    }
+    .img-3-2-1 img{
+        width: 140px !important;
+    }
+    .img-3-2-2 img{
+        width: 200px;
+    }
+    .img-3-2-3 img{
+        width: 290px;
     }
 }
